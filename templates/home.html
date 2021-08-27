@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+</head>
+<body>
+    <nav>
+        <div id="navigation">
+            <h1 id="Logo">Word Count App!</h1>
+            <div id="navitems">
+                <li>
+                    <ul><a href="">Home</a></ul>
+                    <ul><a href="{% url 'about'%}">About</a></ul>
+                <li>
+            </div>
+        </div>
+    </nav>
+    <form action="{% url 'count' %}">
+        <textarea name="fulltext" cols="40" rows="10"></textarea><br />
+        <input type="submit" value="Count!" />
+    </form>
+</body>
+</html>
